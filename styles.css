@@ -1457,9 +1457,9 @@ textarea.form-control {
 
 @media (max-width: 767px) {
   .hero-logo {
-    width: 130vw;
-    max-width: 130vw;
-    transform: translateX(-35%);
+    width: 100vw;
+    max-width: 100vw;
+    transform: translateX(0);
   }
   .hero-tagline {
     margin-top: 80px;

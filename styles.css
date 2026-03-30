@@ -378,7 +378,7 @@ button {
   display: block;
   margin: 0 auto;
   object-fit: contain;
-  transform: translateX(-7%);
+  transform: translateX(0);
   animation: fadeInDown 0.9s cubic-bezier(0.4,0,0.2,1) forwards;
   filter: drop-shadow(0 0 50px rgba(201,168,76,0.22));
 }
@@ -1459,7 +1459,7 @@ textarea.form-control {
   .hero-logo {
     width: 130vw;
     max-width: 130vw;
-    transform: translateX(-13%);
+    transform: translateX(0);
   }
 }
 

@@ -373,7 +373,7 @@ button {
 }
 
 .hero-logo {
-  width: clamp(340px, 82vw, 580px);
+  width: clamp(440px, 90vw, 760px);
   max-width: 95%;
   display: block;
   margin: 0 auto;
@@ -1459,7 +1459,7 @@ textarea.form-control {
     padding-bottom: 2rem;
   }
 
-  .hero-logo { width: clamp(160px, 30vh, 260px); }
+  .hero-logo { width: clamp(220px, 40vh, 360px); }
 
   .mobile-menu {
     overflow-y: auto;

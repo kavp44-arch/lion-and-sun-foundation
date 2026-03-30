@@ -1459,7 +1459,7 @@ textarea.form-control {
   .hero-logo {
     width: 130vw;
     max-width: 130vw;
-    transform: translateX(0);
+    transform: translateX(-15%);
   }
 }
 

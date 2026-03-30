@@ -233,7 +233,14 @@ button {
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
   opacity: 0;
+  pointer-events: none;
   transition: opacity 0.3s ease;
+}
+
+.mobile-menu-overlay.open {
+  display: block;
+  opacity: 1;
+  pointer-events: auto;
 }
 
 .mobile-menu {
@@ -824,41 +831,58 @@ section {
    BOARD MEMBERS
    ============================================ */
 
+.board-intro-section {
+  background: var(--light-bg);
+  padding: clamp(2rem, 4vw, 3.5rem) max(1.25rem, var(--safe-left));
+}
+
+.board-intro-text {
+  font-size: clamp(0.95rem, 2vw, 1.05rem);
+  color: var(--text-muted);
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.85;
+  text-align: center;
+}
+
 .board-section { background: var(--white); }
 
+/* Mobile: single column stacked cards */
 .board-grid {
   display: grid;
   grid-template-columns: 1fr;
   gap: 1rem;
-  margin-top: 2rem;
 }
 
 .board-card {
   display: flex;
-  align-items: center;
-  gap: 1.25rem;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 1rem;
   padding: 1.25rem;
   border: 1px solid var(--border);
   border-radius: var(--radius-md);
+  border-left: 3px solid var(--gold);
   transition: var(--transition);
   background: var(--white);
-  text-align: left;
+  overflow: hidden;
+  width: 100%;
 }
 
 @media (hover: hover) {
   .board-card:hover {
-    transform: translateY(-4px);
+    transform: translateY(-3px);
     box-shadow: var(--shadow-md);
-    border-color: var(--gold);
+    border-left-color: var(--navy);
   }
 }
 
 .board-photo {
-  width: 72px;
-  height: 72px;
+  width: 64px;
+  height: 64px;
+  min-width: 64px;
   border-radius: 50%;
   background: linear-gradient(135deg, #dce3f0, #b8c5db);
-  flex-shrink: 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -867,31 +891,39 @@ section {
 }
 
 .board-photo svg {
-  width: 36px;
-  height: 36px;
+  width: 32px;
+  height: 32px;
   color: #8a9cc0;
 }
 
-.board-info { min-width: 0; }
+.board-info {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+}
 
 .board-name {
   font-family: 'Playfair Display', serif;
   font-size: 1rem;
   color: var(--navy);
   margin-bottom: 0.2rem;
+  line-height: 1.3;
+  white-space: normal;
+  word-break: break-word;
 }
 
 .board-title {
-  font-size: 0.72rem;
+  font-size: 0.68rem;
   color: var(--gold);
   text-transform: uppercase;
   letter-spacing: 0.08em;
   font-weight: 600;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.4rem;
+  line-height: 1.4;
 }
 
 .board-divider {
-  width: 24px;
+  width: 20px;
   height: 1.5px;
   background: var(--gold);
   margin-bottom: 0.5rem;
@@ -901,11 +933,25 @@ section {
 .board-bio {
   font-size: 0.8rem;
   color: var(--text-muted);
-  line-height: 1.55;
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
+  line-height: 1.6;
+}
+
+/* Governance section */
+.governance-section {
+  background: var(--light-bg);
+  padding: clamp(3rem, 7vw, 5rem) max(1.25rem, var(--safe-left));
+}
+
+.governance-inner {
+  max-width: 720px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.governance-text {
+  font-size: clamp(0.9rem, 2vw, 1rem);
+  color: var(--text-muted);
+  line-height: 1.9;
 }
 
 /* ============================================
@@ -1211,20 +1257,32 @@ textarea.form-control {
     grid-template-columns: repeat(2, 1fr);
   }
 
+  /* Board: 2 columns, vertical card layout at 640px */
   .board-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 
   .board-card {
     flex-direction: column;
+    align-items: center;
     text-align: center;
-    padding: 2rem 1.5rem;
+    padding: 1.75rem 1.25rem;
+    gap: 0.85rem;
   }
 
-  .board-photo { width: 90px; height: 90px; }
-  .board-photo svg { width: 46px; height: 46px; }
-  .board-info { text-align: center; }
-  .board-divider { margin: 0.6rem auto 0.5rem; }
+  .board-photo {
+    width: 80px;
+    height: 80px;
+    min-width: 80px;
+  }
+
+  .board-photo svg { width: 40px; height: 40px; }
+
+  .board-info { text-align: center; width: 100%; }
+
+  .board-name { font-size: 1rem; }
+
+  .board-divider { margin: 0.4rem auto 0.5rem; }
 
   .values-grid {
     grid-template-columns: repeat(3, 1fr);
@@ -1301,9 +1359,22 @@ textarea.form-control {
     font-size: clamp(1.1rem, 2.5vw, 1.35rem);
   }
 
+  /* Board: 3 columns at 768px */
   .board-grid {
     grid-template-columns: repeat(3, 1fr);
   }
+
+  .board-card {
+    padding: 2rem 1.5rem;
+  }
+
+  .board-photo {
+    width: 90px;
+    height: 90px;
+    min-width: 90px;
+  }
+
+  .board-photo svg { width: 46px; height: 46px; }
 }
 
 /* ============================================
@@ -1369,7 +1440,7 @@ textarea.form-control {
   .navbar-toggle { display: flex; }
   .navbar-nav { display: none; }
   .mobile-menu { display: block; }
-  .mobile-menu-overlay { display: block; }
+  /* overlay is controlled exclusively by JS .open class — never set display:block here */
 }
 
 /* ============================================

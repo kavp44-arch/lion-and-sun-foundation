@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+
   <!-- ── MOBILE MENU OVERLAY ── -->
   <div class="mobile-menu-overlay"></div>
   <div class="mobile-menu">
@@ -34,7 +35,7 @@
         <span class="navbar-brand-tagline">Rebuilding Lives — Renewing Hope</span>
       </div>
     </a>
-    <button class="navbar-toggle" aria-label="Toggle menu">
+    <button class="navbar-toggle" aria-label="Toggle menu" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
     <ul class="navbar-nav">
@@ -57,9 +58,9 @@
   </div>
 
   <!-- ── BOARD INTRO ── -->
-  <section style="background:var(--light-bg); padding:4rem 2rem;">
+  <section class="board-intro-section">
     <div class="container text-center">
-      <p class="reveal" style="font-size:1.05rem; color:var(--text-muted); max-width:700px; margin:0 auto; line-height:1.9;">
+      <p class="reveal board-intro-text">
         The Lion and Sun Foundation is governed by a Board of Directors committed to upholding the highest standards of humanitarian leadership, ethical governance, and institutional independence. Each member brings expertise, dedication, and a shared vision for a better future.
       </p>
     </div>
@@ -78,10 +79,12 @@
               <circle cx="12" cy="7" r="4"/>
             </svg>
           </div>
-          <h3 class="board-name">Dr. Layla Ahmadi</h3>
-          <div class="board-divider"></div>
-          <p class="board-title">Chair of the Board</p>
-          <p class="board-bio">International humanitarian law specialist with over two decades of experience in crisis response, institutional governance, and human rights advocacy across the Middle East and Europe.</p>
+          <div class="board-info">
+            <h3 class="board-name">Dr. Layla Ahmadi</h3>
+            <p class="board-title">Chair of the Board</p>
+            <div class="board-divider"></div>
+            <p class="board-bio">International humanitarian law specialist with over two decades of experience in crisis response, institutional governance, and human rights advocacy across the Middle East and Europe.</p>
+          </div>
         </div>
 
         <!-- Member 2 -->
@@ -92,10 +95,12 @@
               <circle cx="12" cy="7" r="4"/>
             </svg>
           </div>
-          <h3 class="board-name">Mr. Dariush Karimi</h3>
-          <div class="board-divider"></div>
-          <p class="board-title">Vice Chair &amp; Secretary General</p>
-          <p class="board-bio">Former senior diplomat and public policy advisor with extensive experience in international development, multilateral institutions, and civil society engagement across four continents.</p>
+          <div class="board-info">
+            <h3 class="board-name">Mr. Dariush Karimi</h3>
+            <p class="board-title">Vice Chair &amp; Secretary General</p>
+            <div class="board-divider"></div>
+            <p class="board-bio">Former senior diplomat and public policy advisor with extensive experience in international development, multilateral institutions, and civil society engagement across four continents.</p>
+          </div>
         </div>
 
         <!-- Member 3 -->
@@ -106,10 +111,12 @@
               <circle cx="12" cy="7" r="4"/>
             </svg>
           </div>
-          <h3 class="board-name">Prof. Shirin Moradi</h3>
-          <div class="board-divider"></div>
-          <p class="board-title">Director of Programs</p>
-          <p class="board-bio">Professor of public health and epidemiology, recognized for her field research in post-conflict healthcare reconstruction and community-based rehabilitation models.</p>
+          <div class="board-info">
+            <h3 class="board-name">Prof. Shirin Moradi</h3>
+            <p class="board-title">Director of Programs</p>
+            <div class="board-divider"></div>
+            <p class="board-bio">Professor of public health and epidemiology, recognized for her field research in post-conflict healthcare reconstruction and community-based rehabilitation models.</p>
+          </div>
         </div>
 
         <!-- Member 4 -->
@@ -120,10 +127,12 @@
               <circle cx="12" cy="7" r="4"/>
             </svg>
           </div>
-          <h3 class="board-name">Mr. Farhad Tehrani</h3>
-          <div class="board-divider"></div>
-          <p class="board-title">Chief Financial Officer</p>
-          <p class="board-bio">Certified financial auditor and non-profit governance expert with a distinguished career overseeing transparent fiscal management for international humanitarian organizations.</p>
+          <div class="board-info">
+            <h3 class="board-name">Mr. Farhad Tehrani</h3>
+            <p class="board-title">Chief Financial Officer</p>
+            <div class="board-divider"></div>
+            <p class="board-bio">Certified financial auditor and non-profit governance expert with a distinguished career overseeing transparent fiscal management for international humanitarian organizations.</p>
+          </div>
         </div>
 
         <!-- Member 5 -->
@@ -134,10 +143,12 @@
               <circle cx="12" cy="7" r="4"/>
             </svg>
           </div>
-          <h3 class="board-name">Dr. Nasrin Hosseini</h3>
-          <div class="board-divider"></div>
-          <p class="board-title">Director of Child Welfare</p>
-          <p class="board-bio">Pediatric psychologist and child protection advocate, specializing in trauma-informed care, educational inclusion programs, and the psychosocial support of displaced children.</p>
+          <div class="board-info">
+            <h3 class="board-name">Dr. Nasrin Hosseini</h3>
+            <p class="board-title">Director of Child Welfare</p>
+            <div class="board-divider"></div>
+            <p class="board-bio">Pediatric psychologist and child protection advocate, specializing in trauma-informed care, educational inclusion programs, and the psychosocial support of displaced children.</p>
+          </div>
         </div>
 
         <!-- Member 6 -->
@@ -148,10 +159,12 @@
               <circle cx="12" cy="7" r="4"/>
             </svg>
           </div>
-          <h3 class="board-name">Eng. Reza Sadeghi</h3>
-          <div class="board-divider"></div>
-          <p class="board-title">Director of Infrastructure</p>
-          <p class="board-bio">Civil engineer and urban development specialist with 25 years of experience leading infrastructure reconstruction projects in conflict-affected and disaster-stricken communities.</p>
+          <div class="board-info">
+            <h3 class="board-name">Eng. Reza Sadeghi</h3>
+            <p class="board-title">Director of Infrastructure</p>
+            <div class="board-divider"></div>
+            <p class="board-bio">Civil engineer and urban development specialist with 25 years of experience leading infrastructure reconstruction projects in conflict-affected and disaster-stricken communities.</p>
+          </div>
         </div>
 
       </div>
@@ -159,13 +172,13 @@
   </section>
 
   <!-- ── GOVERNANCE NOTE ── -->
-  <section style="background:var(--light-bg); padding:5rem 2rem;">
+  <section class="governance-section">
     <div class="container">
-      <div style="max-width:720px; margin:0 auto; text-align:center;">
+      <div class="governance-inner">
         <p class="section-label reveal">Governance</p>
         <h2 class="section-title reveal">Independent &amp; Accountable</h2>
         <div class="section-divider center reveal"></div>
-        <p class="reveal" style="font-size:1rem; color:var(--text-muted); line-height:1.9;">
+        <p class="reveal governance-text">
           The Board of Directors operates under a strict governance framework designed to ensure full independence, financial accountability, and the highest ethical standards. Board decisions are made collectively, in alignment with the Foundation's humanitarian mandate, and are subject to independent audit and public reporting.
         </p>
         <div class="reveal" style="margin-top:2rem;">
@@ -185,36 +198,38 @@
           <div class="footer-tagline">Rebuilding Lives — Renewing Hope</div>
           <p class="footer-desc">A humanitarian foundation dedicated to the well-being of the Iranian people through concrete, transparent, and independent action.</p>
         </div>
-        <div class="footer-col">
-          <h4>Navigation</h4>
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About &amp; Mission</a></li>
-            <li><a href="programs.html">Programs</a></li>
-            <li><a href="board.html">Board Members</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Programs</h4>
-          <ul>
-            <li><a href="programs.html#pillar-1">Child Protection</a></li>
-            <li><a href="programs.html#pillar-2">Medical Care</a></li>
-            <li><a href="programs.html#pillar-3">Emergency Relief</a></li>
-            <li><a href="programs.html#pillar-4">Clean Water</a></li>
-            <li><a href="programs.html#pillar-5">Infrastructure</a></li>
-            <li><a href="programs.html#pillar-6">Education</a></li>
-            <li><a href="programs.html#pillar-7">Integrity</a></li>
-          </ul>
+        <div class="footer-cols-row">
+          <div class="footer-col">
+            <h4>Navigation</h4>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About &amp; Mission</a></li>
+              <li><a href="programs.html">Programs</a></li>
+              <li><a href="board.html">Board Members</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Programs</h4>
+            <ul>
+              <li><a href="programs.html#pillar-1">Child Protection</a></li>
+              <li><a href="programs.html#pillar-2">Medical Care</a></li>
+              <li><a href="programs.html#pillar-3">Emergency Relief</a></li>
+              <li><a href="programs.html#pillar-4">Clean Water</a></li>
+              <li><a href="programs.html#pillar-5">Infrastructure</a></li>
+              <li><a href="programs.html#pillar-6">Education</a></li>
+              <li><a href="programs.html#pillar-7">Integrity</a></li>
+            </ul>
+          </div>
         </div>
       </div>
       <div class="footer-bottom">
         <p class="footer-copy">&copy; 2025 Lion and Sun Foundation. All rights reserved.</p>
         <div class="footer-social">
-          <a href="#" aria-label="Twitter"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
-          <a href="#" aria-label="LinkedIn"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
-          <a href="#" aria-label="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg></a>
-          <a href="#" aria-label="Facebook"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+          <a href="#" aria-label="Twitter"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+          <a href="#" aria-label="LinkedIn"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+          <a href="#" aria-label="Instagram"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg></a>
+          <a href="#" aria-label="Facebook"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
         </div>
       </div>
     </div>

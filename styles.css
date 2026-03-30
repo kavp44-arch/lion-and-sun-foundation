@@ -373,10 +373,13 @@ button {
 }
 
 .hero-logo {
-  width: clamp(200px, 55vw, 340px);
-  max-width: 90%;
+  width: clamp(280px, 70vw, 480px);
+  max-width: 92%;
+  display: block;
+  margin: 0 auto;
+  object-fit: contain;
   animation: fadeInDown 0.9s cubic-bezier(0.4,0,0.2,1) forwards;
-  filter: drop-shadow(0 0 40px rgba(201,168,76,0.18));
+  filter: drop-shadow(0 0 50px rgba(201,168,76,0.22));
 }
 
 .hero-tagline {
@@ -1455,7 +1458,7 @@ textarea.form-control {
     padding-bottom: 2rem;
   }
 
-  .hero-logo { width: clamp(120px, 25vh, 200px); }
+  .hero-logo { width: clamp(160px, 30vh, 260px); }
 
   .mobile-menu {
     overflow-y: auto;

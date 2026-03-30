@@ -46,6 +46,8 @@ html {
   scroll-behavior: smooth;
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
+  overflow-x: hidden;
+  max-width: 100%;
 }
 
 body {
@@ -54,8 +56,14 @@ body {
   background: var(--white);
   line-height: 1.7;
   overflow-x: hidden;
+  max-width: 100%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+/* ── GLOBAL OVERFLOW LOCK ─────────────────── */
+*:not(html):not(body) {
+  max-width: 100%;
 }
 
 h1, h2, h3, h4, h5 {
@@ -112,6 +120,8 @@ button {
   align-items: center;
   gap: 0.65rem;
   min-width: 0;
+  overflow: hidden;
+  flex: 1;
 }
 
 .navbar-brand img {
@@ -619,6 +629,11 @@ section {
   grid-template-columns: 1fr;
   gap: 0.85rem;
   margin-top: 2rem;
+}
+
+/* Never force a specific column on mobile */
+.pillar-card--last {
+  grid-column: auto;
 }
 
 .pillar-card {
@@ -1238,8 +1253,8 @@ textarea.form-control {
     grid-template-columns: repeat(3, 1fr);
   }
 
-  /* Make last pillar card span center on 3-col */
-  .pillars-grid .pillar-card:last-child {
+  /* Center last pillar card on 3-col layout */
+  .pillar-card--last {
     grid-column: 2;
   }
 

@@ -10,6 +10,7 @@
 :root {
   --navy:        #1B2A4A;
   --navy-deep:   #111e36;
+  --hero-bg:     #0d1a30;
   --gold:        #C9A84C;
   --gold-light:  #e0c278;
   --gold-dim:    rgba(201,168,76,0.12);
@@ -342,7 +343,7 @@ button {
 .hero {
   min-height: 100vh;
   min-height: 100dvh;
-  background: var(--dark);
+  background: var(--hero-bg);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -407,7 +408,7 @@ button {
    ============================================ */
 
 .page-hero {
-  background: var(--dark);
+  background: var(--hero-bg);
   padding: calc(var(--nav-h) + var(--safe-top) + clamp(2rem, 5vw, 4rem)) max(1.5rem, var(--safe-right)) clamp(2.5rem, 5vw, 4rem) max(1.5rem, var(--safe-left));
   text-align: center;
   position: relative;
